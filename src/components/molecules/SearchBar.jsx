@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import AppIcon from "@/components/atoms/AppIcon";
+import ApperIcon from "@/components/ApperIcon";
 import Input from "@/components/atoms/Input";
 
 function SearchBar({ onSearch, placeholder, className }) {
@@ -39,7 +39,7 @@ function SearchBar({ onSearch, placeholder, className }) {
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
           onClick={() => setSearchTerm('')}
         >
-          <AppIcon name="X" className="w-4 h-4" />
+          <ApperIcon name="X" className="w-4 h-4" />
         </motion.button>
       )}
     </motion.div>
