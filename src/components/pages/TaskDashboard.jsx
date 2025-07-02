@@ -86,16 +86,17 @@ const TaskDashboard = () => {
     }
     
     // Sort tasks
-    filtered.sort((a, b) => {
+filtered.sort((a, b) => {
       switch (sortBy) {
         case 'dueDate':
           if (!a.dueDate && !b.dueDate) return 0
           if (!a.dueDate) return 1
           if (!b.dueDate) return -1
           return new Date(a.dueDate) - new Date(b.dueDate)
-        case 'priority':
+        case 'priority': {
           const priorityOrder = { urgent: 4, high: 3, medium: 2, low: 1 }
           return (priorityOrder[b.priority] || 1) - (priorityOrder[a.priority] || 1)
+        }
         case 'created':
           return new Date(b.createdAt) - new Date(a.createdAt)
         case 'title':
