@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Input from "@/components/atoms/Input";
 import AppIcon from "@/components/atoms/AppIcon";
-const SearchBar = ({ onSearch, placeholder = "Search tasks...", className = '' }) => {
+import Input from "@/components/atoms/Input";
+
+function SearchBar({ onSearch, placeholder, className }) {
   const [searchTerm, setSearchTerm] = useState('')
   const [isFocused, setIsFocused] = useState(false)
   
