@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Button from "@/components/atoms/Button";
 import Input from "@/components/atoms/Input";
 import Select from "@/components/atoms/Select";
-import Icon from "@/components/atoms/Icon";
+import { X } from "lucide-react";
 import { format } from "date-fns";
 
 const TaskForm = ({ 
@@ -111,8 +111,8 @@ const TaskForm = ({
         <h3 className="text-lg font-semibold text-gray-900 font-display">
           {task ? 'Edit Task' : 'Create New Task'}
 </h3>
-        <Button variant="ghost" onClick={onCancel} className="p-2">
-          <Icon name="X" className="w-5 h-5" />
+<Button variant="ghost" onClick={onCancel} className="p-2">
+          <X className="w-5 h-5" />
         </Button>
       </div>
       
